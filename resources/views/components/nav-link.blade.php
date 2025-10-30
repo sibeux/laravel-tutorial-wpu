@@ -1,3 +1,6 @@
+{{-- {props} Agar properti :active tidak muncul di inspect element. --}}
+@props(['active' => false])
+
 <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
 {{-- Kode {attributes} => apa pun yang dimasukkan ke attribute komponen, akan masuk ke variable $attributes --}}
 <a {{ $attributes }} aria-current="{{ $active ? 'page' : false }}"

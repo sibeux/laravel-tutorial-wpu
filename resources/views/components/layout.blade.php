@@ -29,7 +29,7 @@
 
         {{-- Kode {SLOT} => Kata "Homepage" akan di-assign ke variable $slot" --}}
         <x-header>{{ $title }}</x-header>
-        <main>
+        <main class="bg-white">
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                 {{ $slot }}
             </div>
