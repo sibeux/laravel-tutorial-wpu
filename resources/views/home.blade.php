@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Home</title>
-</head>
-
-<body>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <h1>Home</h1>
-</body>
-
-<script src="js/script.js"></script>
-
-</html>
+{{-- Dump & Die => sering dipakai untuk debugging --}}
+{{-- {{ dd($title) }} --}}
+<x-layout>
+    {{-- Terima data dari route, lalu kirimkan ke layout.blade --}}
+    <x-slot:title>{{ $title }}</x-slot:title>
+    <!-- Your content -->
+    <p class="text-white">Welcome to my homepage!</p>
+</x-layout>

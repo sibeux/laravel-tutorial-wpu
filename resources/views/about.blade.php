@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layout>
+    {{-- Terima data dari route, lalu kirimkan ke layout.blade --}}
+    <x-slot:title>{{ $title }}</x-slot:title>
+    <!-- Your content -->
+    <div class="text-white">
+        <p>Welcome to my About!</p>
+        <p>Nama: {{ $name }}</p>
+    </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>About</title>
-</head>
-
-<body>
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <h1>About</h1>
-    <h3>Welcome: {{ $name }}</h3>
-    <img src="img/ss.png" alt="ss" width="200">
-</body>
-
-</html>
+</x-layout>
