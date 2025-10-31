@@ -4,9 +4,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model // by default langsung terhubung ke tabel db posts
 {
+    // ! Perlu ini
+    use HasFactory;
     // Opsional -> jika ingin dihubungkan ke table lain.
     // protected $table = 'blog_posts';
     // by default pakai {id}
