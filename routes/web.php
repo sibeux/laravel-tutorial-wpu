@@ -24,9 +24,9 @@ Route::get('/blog', function () {
     ]);
 });
 
-Route::get('/blog/{slug}', function ($slug) {
+Route::get('/blog/{post:slug}', function (Post $post) {
     // dd($slug);
-    $post = Post::find($slug);
+    // $post = Post::find($slug);
     // dd($post);
     return view('blog-content', ['title' => 'Single Post', 'post' => $post]);
 });
