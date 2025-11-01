@@ -5,6 +5,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Post extends Model // by default langsung terhubung ke tabel db posts
 {
@@ -21,4 +22,8 @@ class Post extends Model // by default langsung terhubung ke tabel db posts
     protected $fillable = ['title', 'author', 'slug', 'body'];
     // apa kolom yang tidak boleh diisi.
     // protected $guarded = ['id'];
+
+    public function author(): BelongsTo {
+        return $this->belongsTo(User::class);
+    }
 }
